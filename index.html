@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- <meta name="viewport" content="width=device-width"> -->
+  <meta name="apple-mobile-web-app-title" content="op1 notator">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+<!-- <meta name="viewport" content="initial-scale=1.0"> -->
+
+
+	<title>op1 notator</title>
+	<style>
+
+   @import url(https://fonts.googleapis.com/css?family=Jura:400,500); 
+
+  *{
+     user-select: none;
+     -moz-user-select: none;
+     -webkit-user-select: none;
+     -ms-user-select: none;
+     margin:0;
+  }
+
+  html{
+  	background:lightgray;
+    /*padding:10px;*/
+
+  }		
+	.box{
+     border: 1px solid black;
+    margin: 5px;
+    background: #9E9E9E;
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding: 1px;
+    font-size: 37px;
+    font-family: Jura;
+    line-height: 50px;
+    text-align: center;
+    color: #272727;
+}
+
+.split{
+      border: 1px solid black;
+    margin: -1px;
+    width: 32em;
+    /* float: left; */
+    clear: both;
+}
+
+#gridWrapper{
+	display: inline-block;
+    border: 1px solid;
+ 
+}
+
+#colorPicker{
+	    /* width: 60px; */
+    /* height: 509px; */
+    border: 1px solid black;
+    margin-right: 10px;
+    float: left;
+    padding: 5px;
+    background: dimgrey;
+    margin-bottom: 10px;
+    margin-top:10px;
+    /* display: inline-block; */
+    /* line-height: 18px; */
+    /* vertical-align: 2px; */
+}
+
+.mode{
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    display: inline-block;
+    /* line-height: 10px; */
+    /*vertical-align: bottom;*/
+}
+
+#reset{
+  background-image: url(reset.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition:transform ease-in 0.3s;
+}
+
+
+.reset{
+    width: 40px;
+    height: 40px;
+    /*border: 5px solid dimgray;*/
+    margin: 0 auto;
+    margin-bottom: 0px;
+    display: inline-block;
+    vertical-align: bottom;
+    padding:5px;
+    margin-left: 40px;
+}
+
+
+
+
+	</style>
+</head>
+<body>
+
+  <div id="colorPicker">
+    <div class="mode" style="background-color:rgb(89, 179, 239)" onclick="changeColor(this);"></div>
+    <div class="mode" style="background-color:rgb(1, 200, 105)" onclick="changeColor(this);"></div>
+    <div class="mode" style="background-color:white" onclick="changeColor(this);"></div>
+    <div class="mode" style="background-color:rgb(254, 85, 46)" onclick="changeColor(this);"></div>
+    <div id="reset" class="reset" onclick="rotate()"></div>
+    
+  </div>
+	<div id="gridWrapper"></div>
+<script type='application/javascript' src='fastclick.js'></script>
+<script type="text/javascript">
+  if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
+}
+</script>	
+<script src="app.js"></script>
+<script>
+  var box1 = document.getElementsByClassName('mode');
+  box1[0].style.border = "5px solid black";
+</script>	
+</body>
+</html>
