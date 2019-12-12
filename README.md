@@ -1,5 +1,5 @@
 # op1-notator
-64 step notator for endless sequencer
+64 step notator for the endless sequencer on the Op-1 synthesizer
 
 Live version: http://devism.github.io/op1-notator/
 
